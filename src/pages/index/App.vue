@@ -1,15 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to the TAPStats app."/>
+  <ModalExample />
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import ModalExample from './components/ModalExample.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  , ModalExample
   }
 }
 </script>
