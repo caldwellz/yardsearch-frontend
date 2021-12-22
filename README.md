@@ -1,4 +1,4 @@
-# tapstats-frontend
+# yardstats-frontend
 
 ## Project setup
 ```

@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to the TAPStats app."/>
+  <HelloWorld msg="Welcome to the YardStats app."/>
   <ModalExample />
 </template>
 

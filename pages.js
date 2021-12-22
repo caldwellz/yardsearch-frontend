@@ -5,8 +5,8 @@ const srcRoot = process.env.PWD;
 const pageInfo = [
   {
     name: 'index'
-  , title: 'TAPStats | Home'
-  , desc: 'Main page of TAPStats.'
+  , title: 'YardStats | Home'
+  , desc: 'Main page of YardStats.'
   }
 ];
 
