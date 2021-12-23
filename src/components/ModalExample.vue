@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootswatch/dist/spacelab/bootstrap.min.css"
 import "bootstrap"
 
 export default {
