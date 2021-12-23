@@ -5,8 +5,18 @@ const srcRoot = process.env.PWD;
 const pageInfo = [
   {
     name: 'index'
-  , title: 'YardStats | Home'
-  , desc: 'Main page of YardStats.'
+  , title: 'Statistics & Search Overview | YardStats'
+  , desc: 'See recent yard statistics and search for vehicles in Utah junkyards.'
+  }
+, {
+    name: 'search'
+  , title: 'Vehicle Search | YardStats'
+  , desc: 'Search for vehicles in Utah junkyards.'
+  }
+, {
+    name: 'stats'
+  , title: 'Vehicle Statistics | YardStats'
+  , desc: 'See recent vehicle statistics for Utah junkyards.'
   }
 ];
 
