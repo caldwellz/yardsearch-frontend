@@ -28,6 +28,7 @@ for (let page of pageInfo) {
     , filename: `${page.name}.html`
     , title: page.title
     , desc: page.desc
+    , pagename: page.name
     , chunks: ['chunk-vendors', 'chunk-common', page.name]
   }
 }
