@@ -1,29 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to the YardStats app."/>
-  <ModalExample />
+  <BModal content="Content Override - Prop" title="Prop Title" @confirm="onModalConfirm">
+    <template v-slot:content>Content Override - Slot</template>
+    <template v-slot:title>Slot Title</template>
+  </BModal>
+  <BButton target=".modal" toggle="modal">Open Modal</BButton>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import ModalExample from './components/ModalExample.vue'
+import BButton from '@/components/bootstrap/BButton.vue'
+import BModal from '@/components/bootstrap/BModal.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  , ModalExample
+    BButton,
+    BModal
+  },
+  data() {
+    return {
+
+    }
+  },
+  created() {
+    console.log('Component created.');
+  },
+  methods: {
+    onModalConfirm(emittedData) {
+      console.log('Modal confirmed.');
+      console.log(emittedData);
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
