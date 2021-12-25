@@ -1,10 +1,10 @@
 <template>
-  <div class="modal" :id="id" role="dialog">
+  <div class="modal fade" :id="id" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title"><slot name="title">{{ title }}</slot></h5>
-          <BButton color="close" dismiss="modal" @click="$emit('cancel')"><span aria-hidden="true">&times;</span></BButton>
+          <BButton color="close" dismiss="modal" @click="$emit('cancel')" aria-label="Close" />
         </div>
         <div class="modal-body">
           <p><slot name="content">{{ content }}</slot></p>
