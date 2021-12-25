@@ -1,8 +1,8 @@
 <template>
-  <nav :class="`navbar navbar-expand-lg navbar-${color} bg-${backgroundColor} p-0 ${classes}`">
+  <nav :class="`navbar navbar-expand-lg navbar-${color} bg-${backgroundColor} p-0 ${classes}`" aria-label="Site navigation bar">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><slot>{{ title }}</slot></a>
-      <BButton classes="navbar-toggler" toggle="collapse" target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <BButton classes="navbar-toggler" toggle="collapse" target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation links">
         <span class="navbar-toggler-icon"></span>
       </BButton>
       <div class="collapse navbar-collapse">
