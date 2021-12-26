@@ -4,14 +4,14 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title"><slot name="title">{{ title }}</slot></h5>
-          <BButton color="close" dismiss="modal" @click="$emit('cancel')" aria-label="Close" />
+          <Button color="close" dismiss="modal" @click="$emit('cancel')" aria-label="Close" />
         </div>
         <div class="modal-body">
           <p><slot name="content">{{ content }}</slot></p>
         </div>
         <div class="modal-footer">
-          <BButton color="secondary" dismiss="modal" @click="$emit('cancel')"><slot name="cancelLabel">{{ cancelLabel }}</slot></BButton>
-          <BButton dismiss="modal" @click="$emit('confirm', this)"><slot name="confirmLabel">{{ confirmLabel }}</slot></BButton>
+          <Button color="secondary" dismiss="modal" @click="$emit('cancel')"><slot name="cancelLabel">{{ cancelLabel }}</slot></Button>
+          <Button dismiss="modal" @click="$emit('confirm', this)"><slot name="confirmLabel">{{ confirmLabel }}</slot></Button>
         </div>
       </div>
     </div>
@@ -20,12 +20,12 @@
 
 <script>
 import 'bootstrap';
-import BButton from './BButton.vue'
+import Button from './Button.vue'
 
 export default {
-  name: 'BModal',
+  name: 'Modal',
   components: {
-    BButton
+    Button
   },
   emits: ['confirm', 'cancel'],
   props: {

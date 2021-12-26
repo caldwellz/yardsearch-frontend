@@ -6,7 +6,7 @@
 import 'bootstrap';
 
 export default {
-  name: 'BButton',
+  name: 'Button',
   props: {
     color: {
       type:String,

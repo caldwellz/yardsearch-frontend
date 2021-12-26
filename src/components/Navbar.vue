@@ -2,9 +2,9 @@
   <nav :class="`navbar navbar-expand-lg navbar-${color} bg-${backgroundColor} p-0 ${classes}`" aria-label="Site navigation bar">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><slot>{{ title }}</slot></a>
-      <BButton classes="navbar-toggler" toggle="collapse" target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation links">
+      <Button classes="navbar-toggler" toggle="collapse" target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation links">
         <span class="navbar-toggler-icon"></span>
-      </BButton>
+      </Button>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item" v-for="(link, index) in processLinks" :key="index">
@@ -22,12 +22,12 @@
 
 <script>
 import 'bootstrap';
-import BButton from './BButton.vue'
+import Button from './Button.vue'
 
 export default {
-  name: 'BNavbar',
+  name: 'Navbar',
   components: {
-    BButton
+    Button
   },
   props: {
     title: {

@@ -1,28 +1,28 @@
 <template>
   <PageContainer pageTitle="Component Examples &amp; Boilerplate">
-    <BAlert heading="Alert Heading" :text="alertText" :hidden="alertHidden" :timeout="5000"></BAlert>
+    <Alert heading="Alert Heading" :text="alertText" :hidden="alertHidden" :timeout="5000"></Alert>
     <p>App content goes here.</p>
-    <BModal content="Content Override - Prop" title="Prop Title" @confirm="onModalConfirm">
+    <Modal content="Content Override - Prop" title="Prop Title" @confirm="onModalConfirm">
       <template v-slot:content>Content Override - Slot</template>
       <template v-slot:title>Slot Title</template>
-    </BModal>
-    <BButton target=".modal" toggle="modal">Open Modal</BButton>
+    </Modal>
+    <Button target=".modal" toggle="modal">Open Modal</Button>
   </PageContainer>
 </template>
 
 <script>
 import PageContainer from '@/components/PageContainer.vue'
-import BAlert from '@/components/bootstrap/BAlert.vue'
-import BButton from '@/components/bootstrap/BButton.vue'
-import BModal from '@/components/bootstrap/BModal.vue'
+import Alert from '@/components/Alert.vue'
+import Button from '@/components/Button.vue'
+import Modal from '@/components/Modal.vue'
 
 export default {
   name: 'App',
   components: {
     PageContainer,
-    BAlert,
-    BButton,
-    BModal
+    Alert,
+    Button,
+    Modal
   },
   data() {
     return {

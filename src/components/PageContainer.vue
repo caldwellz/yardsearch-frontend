@@ -1,5 +1,5 @@
 <template>
-  <BNavbar :title="siteTitle" :filename="filename" :links="pages" :color="color" :backgroundColor="backgroundColor" />
+  <Navbar :title="siteTitle" :filename="filename" :links="pages" :color="color" :backgroundColor="backgroundColor" />
   <Header :tagline="tagline"><slot name="pageTitle">{{ pageTitle }}</slot></Header>
   <div class="container shadow border border-dark rounded">
     <div class="app-content p-2">
@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import BNavbar from './bootstrap/BNavbar.vue'
+import Navbar from './Navbar.vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
 
 export default {
   name: 'PageContainer',
   components: {
-    BNavbar,
+    Navbar,
     Header,
     Footer
   },

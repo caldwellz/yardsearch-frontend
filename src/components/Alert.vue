@@ -2,18 +2,18 @@
   <div v-show="!(this.isHidden)" :class="`alert alert-dismissible alert-${color} fade show ${classes}`" role="alert">
     <h4 v-if="heading.length" class="alert-heading">{{ heading }}</h4>
     <slot>{{ text }}</slot>
-    <BButton color="close" @click="hide" aria-label="Close" />
+    <Button color="close" @click="hide" aria-label="Close" />
   </div>
 </template>
 
 <script>
 import 'bootstrap';
-import BButton from './BButton.vue'
+import Button from './Button.vue'
 
 export default {
-  name: 'BAlert',
+  name: 'Alert',
   components: {
-    BButton
+    Button
   },
   data() {
     return {
