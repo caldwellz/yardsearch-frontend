@@ -6,7 +6,7 @@
       <a v-if="copyrightAuthorLink && copyrightAuthorLink.length" class="link-light" :href="copyrightAuthorLink">
         {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
       </a>
-      <span v-if="!(copyrightAuthorLink && copyrightAuthorLink.length)">
+      <span v-else>
         {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
       </span>
       {{ copyrightAddendum }}
