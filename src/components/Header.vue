@@ -1,7 +1,7 @@
 <template>
   <header :style="headerStyle">
-    <h2 class="mb-0"><slot>{{ title }}</slot></h2>
-    <p class="lead"><slot name="tagline">{{ tagline }}</slot></p>
+    <h2 class="mt-2"><slot>{{ title }}</slot></h2>
+    <p class="lead mb-2"><slot name="tagline">{{ tagline }}</slot></p>
   </header>
 </template>
 

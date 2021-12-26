@@ -1,7 +1,7 @@
 <template>
   <BNavbar :title="siteTitle" :filename="filename" :links="pages" :color="color" :backgroundColor="backgroundColor" />
-  <div class="container mt-2 shadow border border-dark rounded">
-    <Header :tagline="tagline"><slot name="pageTitle">{{ pageTitle }}</slot></Header>
+  <Header :tagline="tagline"><slot name="pageTitle">{{ pageTitle }}</slot></Header>
+  <div class="container shadow border border-dark rounded">
     <div class="app-content p-2">
       <slot></slot>
     </div>
