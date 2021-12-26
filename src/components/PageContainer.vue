@@ -6,7 +6,11 @@
       <slot></slot>
     </div>
   </div>
-  <Footer copyrightItems="Site design" copyrightAddendum="vehicle stock information owned by its respective sources." />
+  <Footer copyrightItems="Site design" copyrightAddendum="vehicle stock information owned by its respective sources.">
+    This site is open-source! See the
+    <a href="https://github.com/caldwellz/yardstats-frontend/">front-end</a> and
+    <a href="https://github.com/caldwellz/yardstats-backend/">back-end</a> code.
+  </Footer>
 </template>
 
 <script>

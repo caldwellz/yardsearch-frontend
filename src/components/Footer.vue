@@ -1,16 +1,14 @@
 <template>
-  <footer class="mt-2 bg-dark bg-gradient text-light" :style="footerStyle">
-    <slot></slot>
-    <p class="py-2 m-0">
-      {{ copyrightItems.length ? copyrightItems + ' copyright' : 'Copyright' }} &#169; {{ copyrightYear }}
-      <a v-if="copyrightAuthorLink && copyrightAuthorLink.length" class="link-light" :href="copyrightAuthorLink">
-        {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
-      </a>
-      <span v-else>
-        {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
-      </span>
-      {{ copyrightAddendum }}
-    </p>
+  <footer class="mt-2 py-2 bg-dark bg-gradient text-light" :style="footerStyle">
+    <p class="m-0"><slot></slot></p>
+    {{ copyrightItems.length ? copyrightItems + ' copyright' : 'Copyright' }} &#169; {{ copyrightYear }}
+    <a v-if="copyrightAuthorLink && copyrightAuthorLink.length" class="link-light" :href="copyrightAuthorLink">
+      {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
+    </a>
+    <span v-else>
+      {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
+    </span>
+    {{ copyrightAddendum }}
   </footer>
 </template>
 
