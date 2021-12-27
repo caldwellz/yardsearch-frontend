@@ -1,10 +1,8 @@
 <template>
   <Navbar :title="siteTitle" :filename="filename" :links="pages" :color="color" :backgroundColor="backgroundColor" />
   <Header :tagline="tagline"><slot name="pageTitle">{{ pageTitle }}</slot></Header>
-  <div class="container shadow border border-dark rounded">
-    <div class="app-content p-2">
-      <slot></slot>
-    </div>
+  <div id="app-content" class="container shadow border border-dark rounded p-2">
+    <slot></slot>
   </div>
   <Footer copyrightItems="Site design" copyrightAddendum="vehicle stock information owned by its respective sources.">
     This site is open-source! See the
