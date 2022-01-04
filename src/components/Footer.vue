@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-2 py-2 bg-dark bg-gradient text-light" :style="footerStyle">
     <p class="m-0"><slot></slot></p>
-    {{ copyrightItems.length ? copyrightItems + ' copyright' : 'Copyright' }} &#169; {{ copyrightYear }}
+    {{ copyrightItems.length ? copyrightItems + ' copyright' : 'Copyright' }} &#169; {{ copyrightYears }}
     <a v-if="copyrightAuthorLink && copyrightAuthorLink.length" class="link-light" :href="copyrightAuthorLink">
       {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
     </a>
@@ -20,17 +20,17 @@ export default {
       type:String,
       default: ''
     },
-    copyrightYear: {
-      type:Number,
-      default: new Date().getFullYear()
+    copyrightYears: {
+      type:String,
+      default: String(new Date().getFullYear())
     },
     copyrightAuthor: {
       type:String,
-      default: 'Zach Caldwell'
+      default: 'Ensign Technical Solutions, LLC'
     },
     copyrightAuthorLink: {
       type:String,
-      default: 'http://www.zachc.cf/'
+      default: ''
     },
     copyrightAddendum: {
       type:String,
