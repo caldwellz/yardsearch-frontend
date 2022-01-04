@@ -52,6 +52,8 @@ export default {
   watch: {
     hidden(newVal) {
       this.isHidden = newVal;
+      if (newVal === false)
+        this.resetTimeout();
     },
     timeout() {
       this.resetTimeout();
