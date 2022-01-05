@@ -1,5 +1,8 @@
 <template>
-  <PageContainer pageTitle="Welcome to YardStats!" tagline="Junkyard statistics for all.">
+  <PageContainer
+    page-title="Welcome to YardStats!"
+    tagline="Junkyard statistics for all."
+  >
     App content goes here.
   </PageContainer>
 </template>

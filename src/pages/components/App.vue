@@ -1,12 +1,30 @@
 <template>
-  <PageContainer pageTitle="Component Examples &amp; Boilerplate">
-    <Alert heading="Alert Heading" :text="alertText" :hidden="alertHidden" :timeout="5000"></Alert>
+  <PageContainer page-title="Component Examples &amp; Boilerplate">
+    <Alert
+      heading="Alert Heading"
+      :text="alertText"
+      :hidden="alertHidden"
+      :timeout="5000"
+    />
     <p>App content goes here.</p>
-    <Modal content="Content Override - Prop" title="Prop Title" @confirm="onModalConfirm">
-      <template v-slot:content>Content Override - Slot</template>
-      <template v-slot:title>Slot Title</template>
+    <Modal
+      content="Content Override - Prop"
+      title="Prop Title"
+      @confirm="onModalConfirm"
+    >
+      <template #content>
+        Content Override - Slot
+      </template>
+      <template #title>
+        Slot Title
+      </template>
     </Modal>
-    <Button target=".modal" toggle="modal">Open Modal</Button>
+    <Button
+      target=".modal"
+      toggle="modal"
+    >
+      Open Modal
+    </Button>
   </PageContainer>
 </template>
 

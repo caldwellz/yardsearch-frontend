@@ -1,5 +1,11 @@
 <template>
-  <button :type="type" :class="`btn btn-${color} ${classes}`" :data-bs-target="target" :data-bs-toggle="toggle" :data-bs-dismiss="dismiss">
+  <button
+    :type="type"
+    :class="`btn btn-${color} ${classes}`"
+    :data-bs-target="target"
+    :data-bs-toggle="toggle"
+    :data-bs-dismiss="dismiss"
+  >
     <slot>{{ text }}</slot>
   </button>
 </template>

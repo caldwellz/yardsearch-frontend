@@ -1,8 +1,21 @@
 <template>
-  <div v-show="!(this.isHidden)" :class="`alert alert-dismissible alert-${color} fade show ${classes}`" role="alert">
-    <h4 v-if="heading.length" class="alert-heading">{{ heading }}</h4>
+  <div
+    v-show="!(isHidden)"
+    :class="`alert alert-dismissible alert-${color} fade show ${classes}`"
+    role="alert"
+  >
+    <h4
+      v-if="heading.length"
+      class="alert-heading"
+    >
+      {{ heading }}
+    </h4>
     <slot>{{ text }}</slot>
-    <Button color="close" @click="hide" aria-label="Close" />
+    <Button
+      color="close"
+      aria-label="Close"
+      @click="hide"
+    />
   </div>
 </template>
 
@@ -14,11 +27,6 @@ export default {
   name: 'Alert',
   components: {
     Button
-  },
-  data() {
-    return {
-      isHidden: this.hidden
-    }
   },
   props: {
     color: {
@@ -46,8 +54,10 @@ export default {
       default: 0
     }
   },
-  created() {
-    this.resetTimeout();
+  data() {
+    return {
+      isHidden: this.hidden
+    }
   },
   watch: {
     hidden(newVal) {
@@ -58,6 +68,9 @@ export default {
     timeout() {
       this.resetTimeout();
     }
+  },
+  created() {
+    this.resetTimeout();
   },
   methods: {
     hide() {

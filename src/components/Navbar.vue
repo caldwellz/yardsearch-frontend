@@ -1,18 +1,43 @@
 <template>
-  <nav :class="`navbar navbar-expand-lg navbar-${color} bg-${backgroundColor} p-0 ${classes}`" aria-label="Site navigation bar">
+  <nav
+    :class="`navbar navbar-expand-lg navbar-${color} bg-${backgroundColor} p-0 ${classes}`"
+    aria-label="Site navigation bar"
+  >
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><slot>{{ title }}</slot></a>
-      <Button classes="navbar-toggler" toggle="collapse" target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation links">
-        <span class="navbar-toggler-icon"></span>
+      <a
+        class="navbar-brand"
+        href="index.html"
+      ><slot>{{ title }}</slot></a>
+      <Button
+        classes="navbar-toggler"
+        toggle="collapse"
+        target=".navbar-collapse"
+        aria-controls=".navbar-collapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation links"
+      >
+        <span class="navbar-toggler-icon" />
       </Button>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item" v-for="(link, index) in processLinks" :key="index">
-            <a v-if="link.active" class="nav-link active" :href="link.url">
+          <li
+            v-for="(link, index) in processLinks"
+            :key="index"
+            class="nav-item"
+          >
+            <a
+              v-if="link.active"
+              class="nav-link active"
+              :href="link.url"
+            >
               {{ link.title }}
               <span class="visually-hidden">(current)</span>
             </a>
-            <a v-else class="nav-link" :href="link.url">{{ link.title }}</a>
+            <a
+              v-else
+              class="nav-link"
+              :href="link.url"
+            >{{ link.title }}</a>
           </li>
         </ul>
       </div>

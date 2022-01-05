@@ -1,10 +1,27 @@
 <template>
-  <Navbar :title="siteTitle" :filename="filename" :links="pages" :color="color" :backgroundColor="backgroundColor" />
-  <Header :tagline="tagline"><slot name="pageTitle">{{ pageTitle }}</slot></Header>
-  <div id="app-content" class="container shadow border border-dark rounded p-2">
-    <slot></slot>
+  <Navbar
+    :title="siteTitle"
+    :filename="filename"
+    :links="pages"
+    :color="color"
+    :background-color="backgroundColor"
+  />
+  <Header :tagline="tagline">
+    <slot name="pageTitle">
+      {{ pageTitle }}
+    </slot>
+  </Header>
+  <div
+    id="app-content"
+    class="container shadow border border-dark rounded p-2"
+  >
+    <slot />
   </div>
-  <Footer copyrightItems="Site design" copyrightYears="2020-2021" copyrightAddendum="vehicle stock information owned by its respective sources." />
+  <Footer
+    copyright-items="Site design"
+    copyright-years="2020-2021"
+    copyright-addendum="vehicle stock information owned by its respective sources."
+  />
 </template>
 
 <script>
@@ -18,16 +35,6 @@ export default {
     Navbar,
     Header,
     Footer
-  },
-  data() {
-    return {
-      filename: '',
-      pages: [
-        { title: 'Home', url: 'index.html' },
-        { title: 'Stats', url: 'stats.html' },
-        { title: 'Vehicle Search', url: 'search.html' },
-      ]
-    }
   },
   props: {
     siteTitle: {
@@ -49,6 +56,16 @@ export default {
     backgroundColor: {
       type:String,
       default: 'primary'
+    }
+  },
+  data() {
+    return {
+      filename: '',
+      pages: [
+        { title: 'Home', url: 'index.html' },
+        { title: 'Stats', url: 'stats.html' },
+        { title: 'Vehicle Search', url: 'search.html' },
+      ]
     }
   },
   created() {

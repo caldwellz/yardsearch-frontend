@@ -1,5 +1,5 @@
 <template>
-  <PageContainer pageTitle="Vehicle Search">
+  <PageContainer page-title="Vehicle Search">
     App content goes here.
   </PageContainer>
 </template>

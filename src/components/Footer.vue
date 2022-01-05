@@ -1,8 +1,17 @@
 <template>
-  <footer class="mt-2 py-2 bg-dark bg-gradient text-light" :style="footerStyle">
-    <p class="m-0"><slot></slot></p>
+  <footer
+    class="mt-2 py-2 bg-dark bg-gradient text-light"
+    :style="footerStyle"
+  >
+    <p class="m-0">
+      <slot />
+    </p>
     {{ copyrightItems.length ? copyrightItems + ' copyright' : 'Copyright' }} &#169; {{ copyrightYears }}
-    <a v-if="copyrightAuthorLink && copyrightAuthorLink.length" class="link-light" :href="copyrightAuthorLink">
+    <a
+      v-if="copyrightAuthorLink && copyrightAuthorLink.length"
+      class="link-light"
+      :href="copyrightAuthorLink"
+    >
       {{ copyrightAddendum.length ? copyrightAuthor + ';' : copyrightAuthor }}
     </a>
     <span v-else>
