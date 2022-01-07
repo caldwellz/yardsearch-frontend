@@ -7,6 +7,7 @@
     />
     <Form
       :action="`${apiBase}/api/v1/active/vehicles/search`"
+      :auto-reset="false"
       method="get"
       enctype="application/json; charset=utf-8"
       @complete="onSearchComplete"

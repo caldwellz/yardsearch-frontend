@@ -33,6 +33,10 @@ export default {
       type: String,
       default: '#'
     },
+    autoReset: {
+      type: Boolean,
+      default: true
+    },
     method: {
       type: String,
       default: 'post'
@@ -89,7 +93,7 @@ export default {
       this.clientTrigger++;
     },
     onRequestComplete (eventData) {
-      if (eventData.status >= 200 && eventData.status < 300) {
+      if (this.autoReset && eventData.status >= 200 && eventData.status < 300) {
         this.$refs.formElem.reset();
       }
       this.$emit('complete', eventData);
