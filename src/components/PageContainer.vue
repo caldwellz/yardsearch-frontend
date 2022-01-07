@@ -19,7 +19,6 @@
   </div>
   <Footer
     copyright-items="Site design"
-    copyright-years="2020-2021"
     copyright-addendum="vehicle stock information owned by its respective sources."
   />
 </template>
