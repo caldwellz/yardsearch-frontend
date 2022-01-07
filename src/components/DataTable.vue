@@ -1,6 +1,9 @@
 <template>
-  <div class="table-responsive">
-    <table :class="`table table-striped ${classes}`">
+  <div class="table-responsive p-1">
+    <table
+      ref="datatable"
+      :class="`table table-striped ${classes}`"
+    >
       <thead>
         <tr
           v-for="(row, rowIndex) in headers"
@@ -35,6 +38,8 @@
 
 <script>
 import 'bootstrap';
+import DataTable from 'datatables.net-bs5';
+import 'datatables.net-bs5/css/dataTables.bootstrap5.css';
 
 export default {
   name: 'Table',
@@ -51,6 +56,17 @@ export default {
       type:Array,
       default: () => []
     }
+  },
+  data: () => {
+    return {
+      dataTable: {}
+    }
+  },
+  mounted() {
+    this.dataTable = new DataTable(this.$refs.datatable);
+  },
+  updated() {
+    this.dataTable = new DataTable(this.$refs.datatable);
   }
 }
 </script>

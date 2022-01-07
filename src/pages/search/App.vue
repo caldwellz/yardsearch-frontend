@@ -42,7 +42,7 @@
       </Button>
     </Form>
     <br>
-    <Table
+    <DataTable
       v-if="searchPerformed"
       :headers="resultHeaders"
       :rows="resultRows"
@@ -54,25 +54,25 @@
 import PageContainer from '@/components/PageContainer.vue';
 import Alert from '@/components/Alert.vue';
 import Button from '@/components/Button.vue';
+import DataTable from '@/components/DataTable.vue';
 import Form from '@/components/Form.vue';
 import FormSubmit from '@/components/FormSubmit.vue';
 import SelectModel from '@/components/search/SelectModel.vue';
 import SelectYard from '@/components/search/SelectYard.vue';
 import SelectYears from '@/components/search/SelectYears.vue';
-import Table from '@/components/Table.vue';
 
 export default {
   name: 'App',
   components: {
     PageContainer,
     Alert,
-    Form,
     Button,
+    DataTable,
+    Form,
     FormSubmit,
     SelectModel,
     SelectYard,
-    SelectYears,
-    Table
+    SelectYears
   },
   data () {
     return {
