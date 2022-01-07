@@ -67,11 +67,14 @@ export default {
       return yearOptions;
     },
     maxYearOptions () {
-      const yearOptions = [anyOpt];
+      // The years are sorted in ascending order by default,
+      // but we want to reverse that for the max year selector.
+      const yearOptions = [];
       for (const year of this.options.maxYear) {
         yearOptions.push({ value: year });
       }
-      return yearOptions;
+      yearOptions.push(anyOpt);
+      return yearOptions.reverse();
     }
   },
   watch: {
