@@ -63,8 +63,8 @@ export default {
       filename: '',
       pages: [
         { title: 'Home', url: 'index.html' },
-        { title: 'Stats', url: 'stats.html' },
-        { title: 'Vehicle Search', url: 'search.html' },
+        { title: 'Search', url: 'search.html' },
+        { title: 'Stats', url: 'stats.html' }
       ]
     }
   },
