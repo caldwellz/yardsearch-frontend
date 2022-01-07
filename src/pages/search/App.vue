@@ -41,6 +41,12 @@
         Clear
       </Button>
     </Form>
+    <br>
+    <Table
+      v-if="searchPerformed"
+      :headers="resultHeaders"
+      :rows="resultRows"
+    />
   </PageContainer>
 </template>
 
@@ -53,6 +59,7 @@ import FormSubmit from '@/components/FormSubmit.vue';
 import SelectModel from '@/components/search/SelectModel.vue';
 import SelectYard from '@/components/search/SelectYard.vue';
 import SelectYears from '@/components/search/SelectYears.vue';
+import Table from '@/components/Table.vue';
 
 export default {
   name: 'App',
@@ -64,7 +71,8 @@ export default {
     FormSubmit,
     SelectModel,
     SelectYard,
-    SelectYears
+    SelectYears,
+    Table
   },
   data () {
     return {
@@ -73,8 +81,30 @@ export default {
       alertText: 'There was an error retrieving vehicle data. Please try again later.',
       apiBase: '',
       apiTimeout: 10000,
-      resetTrigger: 0
+      resetTrigger: 0,
+      resultHeaders: [['Year', 'Make', 'Model', 'Color', 'Row', 'Yard', 'Placed']],
+      resultRows: [],
+      searchPerformed: false,
+      searchResults: {}
     };
+  },
+  watch: {
+    searchResults: function (data) {
+      // Convert the API results into table rows
+      this.resultRows = [];
+      for (const v of data.results) {
+        const row = [
+          v.year,
+          v.make,
+          v.model,
+          v.color,
+          v.row,
+          v.yard,
+          new Date(v.placed).toLocaleDateString()
+        ];
+        this.resultRows.push(row);
+      }
+    }
   },
   methods: {
     onLoadFailed (event) {
@@ -84,6 +114,8 @@ export default {
     onSearchComplete (event) {
       if (event.status >= 200 && event.status < 300) {
         this.alertHidden = true;
+        this.searchPerformed = true;
+        this.searchResults = event.data;
       } else {
         console.error(event);
         this.alertHidden = false;
