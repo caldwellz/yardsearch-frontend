@@ -1,7 +1,7 @@
 <template>
   <PageContainer
-    page-title="Welcome to YardStats!"
-    tagline="Junkyard statistics for all."
+    page-title="Welcome to ScrapSearch!"
+    tagline="Junkyard searching and statistics for all."
   >
     App content goes here.
   </PageContainer>
