@@ -1,6 +1,6 @@
 <template>
   <div class="table-responsive">
-    <table :class="`table table-striped ${classes}`">
+    <table :class="`table ${classes}`">
       <thead>
         <tr
           v-for="(row, rowIndex) in headers"
