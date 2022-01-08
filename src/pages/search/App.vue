@@ -81,7 +81,7 @@ export default {
       alertHidden: true,
       alertText: 'There was an error retrieving vehicle data. Please try again later.',
       apiBase: '',
-      apiTimeout: 10000,
+      apiTimeout: 5000,
       resetTrigger: 0,
       resultHeaders: [['Year', 'Make', 'Model', 'Color', 'Row', 'Yard', 'Placed']],
       resultRows: [],
