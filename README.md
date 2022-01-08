@@ -1,4 +1,6 @@
-# yardstats-frontend
+# yardsearch-frontend
+
+Front-end implementation of [YardSearch.tk](https://www.yardsearch.tk/), an automotive junkyard search and statistics site.
 
 ## Project setup
 ```
