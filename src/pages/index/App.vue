@@ -1,6 +1,6 @@
 <template>
   <PageContainer
-    page-title="Welcome to ScrapSearch!"
+    page-title="Welcome to YardSearch!"
     tagline="Junkyard searching and statistics for all."
   >
     App content goes here.

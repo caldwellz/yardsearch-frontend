@@ -38,11 +38,11 @@ export default {
   props: {
     siteTitle: {
       type:String,
-      default: 'ScrapSearch'
+      default: 'YardSearch'
     },
     pageTitle: {
       type:String,
-      default: 'ScrapSearch'
+      default: 'YardSearch'
     },
     tagline: {
       type:String,

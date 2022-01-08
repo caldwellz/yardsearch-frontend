@@ -5,17 +5,17 @@ const srcRoot = process.env.PWD;
 const pageInfo = [
   {
     name: 'index'
-  , title: 'ScrapSearch: Overview'
+  , title: 'YardSearch: Overview'
   , desc: 'Search for vehicles and see recent statistics about Utah automotive junkyards.'
   }
 , {
     name: 'search'
-  , title: 'ScrapSearch: Vehicle Search'
+  , title: 'YardSearch: Vehicle Search'
   , desc: 'Search for vehicles in Utah automotive junkyards.'
   }
 , {
     name: 'stats'
-  , title: 'ScrapSearch: Statistics'
+  , title: 'YardSearch: Statistics'
   , desc: 'See recent vehicle statistics for Utah junkyards.'
   }
 , {
