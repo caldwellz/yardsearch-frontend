@@ -18,11 +18,6 @@ const pageInfo = [
   , title: 'YardSearch: Statistics'
   , desc: 'See recent vehicle statistics for Utah junkyards.'
   }
-, {
-    name: 'components'
-  , title: 'Vue Component Examples | YardStats'
-  , desc: 'Examples and copyable boilerplate for Vue components.'
-  }
 ];
 
 let pages = {};
